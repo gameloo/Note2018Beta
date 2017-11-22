@@ -28,9 +28,8 @@ namespace Note2018
         {
             InitializeComponent();
 
-            
             MainPage = new NavigationPage(new MainPage());
-            //MainPage = new Note2018.MainPage();
+            
         }
 
         protected override void OnStart()

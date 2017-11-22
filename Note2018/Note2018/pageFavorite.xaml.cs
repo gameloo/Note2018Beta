@@ -16,5 +16,19 @@ namespace Note2018
         {
             InitializeComponent();
         }
+
+        protected override void OnAppearing()
+        {
+            fNoteList.ItemsSource = App.Database.GetFavoriteItems();
+            base.OnAppearing();
+        }
+
+        private async void noteList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Note selectedNote = (Note)e.SelectedItem;
+            pageNote pageNote = new pageNote();
+            pageNote.BindingContext = selectedNote;
+            await Navigation.PushAsync(pageNote);
+        }
     }
 }

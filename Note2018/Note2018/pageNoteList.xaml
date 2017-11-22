@@ -11,7 +11,7 @@
                         <ViewCell>
                             <ViewCell.View>
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="Binding Headler" FontSize="Medium"/>
+                                    <Label Text="{Binding Headler}" FontSize="Medium" Margin="6" HorizontalOptions="Start" VerticalOptions="Center"/>
 
                                 </StackLayout>
                             </ViewCell.View>
@@ -19,7 +19,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="AddNote" Text="AddNote" Clicked="AddNote_Clicked"/>
+            <Button x:Name="AddNote" Text="Добавить заметку" Clicked="AddNote_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

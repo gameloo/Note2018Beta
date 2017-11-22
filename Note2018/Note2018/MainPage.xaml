@@ -2,6 +2,7 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Note2018"
+             NavigationPage.HasNavigationBar="False"
              x:Class="Note2018.MainPage">
     <TabbedPage.Children>
         <local:pageMenu/>

@@ -26,6 +26,11 @@ namespace Note2018
             return (from i in database.Table<Note>() select i).ToList();
         }
 
+        public IEnumerable<Note> GetFavoriteItems()
+        {
+            return (from i in database.Table<Note>() where i.IsFavorite != 0 select i).ToList();
+        }
+
         public Note GetItem(int id)
         {
             return database.Get<Note>(id);

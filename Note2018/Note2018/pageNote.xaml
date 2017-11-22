@@ -2,20 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Note2018.pageNote"
-             Title="Редактор">
+             Title="Заметка">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Папка"/>
-            <Entry Text="{Binding FolderName}"/>
-            <Label Text="Заголовок"/>
-            <Entry Text="{Binding Headler}"/>
-            <Label Text="Текст"/>
-            <Entry Text="{Binding NoteText}"/>
             <StackLayout Orientation="Horizontal">
-                <Button x:Name="SaveNote" Text="Save" Clicked="SaveNote_Clicked"/>
-                <Button x:Name="DelNote" Text="Del" Clicked="DelNote_Clicked"/>
-                <Button x:Name="Cancel" Text="Cancel" Clicked="Cancel_Clicked"/>
+                <Label Text="В избранном" Margin="6" FontSize="Medium" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Switch x:Name="SwitchFavorite" IsToggled="{Binding IsFavorite}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="6"/>
             </StackLayout>
+            <Label Text="Заголовок" Margin="6" FontSize="Small"/>
+            <Entry Text="{Binding Headler}"/>
+            <Label Text="Текст" Margin="6" FontSize="Small"/>
+            <Editor Text="{Binding NoteText}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Сохранить" Activated="SaveNote_Clicked" Priority="0" Order="Secondary"/>
+        <ToolbarItem Name="Удалить" Activated="DelNote_Clicked" Priority="1" Order="Secondary"/>
+        <ToolbarItem Name="Назад" Activated="Cancel_Clicked" Priority="2" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
 </ContentPage>
