@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Note2018.pageNoteList"
+             Title="Заметки">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="noteList" ItemsSource="{Binding}" ItemSelected="noteList_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Binding Headler" FontSize="Medium"/>
+
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="AddNote" Text="AddNote" Clicked="AddNote_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

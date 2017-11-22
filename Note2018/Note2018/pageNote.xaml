@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Note2018.pageNote"
+             Title="Редактор">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Папка"/>
+            <Entry Text="{Binding FolderName}"/>
+            <Label Text="Заголовок"/>
+            <Entry Text="{Binding Headler}"/>
+            <Label Text="Текст"/>
+            <Entry Text="{Binding NoteText}"/>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="SaveNote" Text="Save" Clicked="SaveNote_Clicked"/>
+                <Button x:Name="DelNote" Text="Del" Clicked="DelNote_Clicked"/>
+                <Button x:Name="Cancel" Text="Cancel" Clicked="Cancel_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
