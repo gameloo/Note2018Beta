@@ -39,5 +39,10 @@ namespace Note2018
         {
             this.Navigation.PopAsync();
         }
+
+        private void SwitchEnTextBox_Toggled(object sender, ToggledEventArgs e)
+        {
+            textBoxNote.IsEnabled = e.Value;
+        }
     }
 }

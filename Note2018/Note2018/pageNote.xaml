@@ -9,10 +9,12 @@
                 <Label Text="В избранном" Margin="6" FontSize="Medium" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Start"/>
                 <Switch x:Name="SwitchFavorite" IsToggled="{Binding IsFavorite}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="6"/>
             </StackLayout>
-            <Label Text="Заголовок" Margin="6" FontSize="Small"/>
-            <Entry Text="{Binding Headler}"/>
-            <Label Text="Текст" Margin="6" FontSize="Small"/>
-            <Editor Text="{Binding NoteText}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Entry Placeholder="Заголовок" Text="{Binding Headler}"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Текст" Margin="6" FontSize="Small"/>
+                <Switch x:Name="SwitchEnTextBox" IsToggled="False" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="6" Toggled="SwitchEnTextBox_Toggled"/>
+            </StackLayout>
+            <Editor x:Name="textBoxNote" Text="{Binding NoteText}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsEnabled="False"/>
         </StackLayout>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>

@@ -41,5 +41,36 @@ namespace Note2018
             pageNote.BindingContext = note;
             await Navigation.PushAsync(pageNote);
         }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            var imageSender = (Image)sender;
+            Note note = new Note();
+            pageNote pageNote = new pageNote();
+            pageNote.BindingContext = note;
+            await Navigation.PushAsync(pageNote);
+        }
+
+        
+
     }
+
+    [ContentProperty("Source")]
+    public class ImageResourceExtension : IMarkupExtension
+    {
+        public string Source { get; set; }
+
+        public object ProvideValue(IServiceProvider serviceProvider)
+        {
+            if (Source == null)
+            {
+                return null;
+            }
+            var imageSource = ImageSource.FromResource(Source);
+
+            return imageSource;
+        }
+    }
+
+
 }

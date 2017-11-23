@@ -2,24 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Note2018.pageNoteList"
+             xmlns:local="clr-namespace:Note2018;assembly=Note2018"
              Title="Заметки">
     <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="noteList" ItemsSource="{Binding}" ItemSelected="noteList_ItemSelected">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.View>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Headler}" FontSize="Medium" Margin="6" HorizontalOptions="Start" VerticalOptions="Center"/>
+        <AbsoluteLayout>
+            
+            <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="SizeProportional">
+                <ListView x:Name="noteList" ItemsSource="{Binding}" ItemSelected="noteList_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Headler}" FontSize="Medium" Margin="6" HorizontalOptions="Start" VerticalOptions="Center"/>
 
-                                </StackLayout>
-                            </ViewCell.View>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <Button x:Name="AddNote" Text="Добавить заметку" Clicked="AddNote_Clicked"/>
-        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            
+            <Image HeightRequest="75" WidthRequest="75" Source="{local:ImageResource Note2018.Pic.FAbutton.png}" AbsoluteLayout.LayoutBounds=".9,.95,75,75" AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+            
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
