@@ -6,30 +6,31 @@
              Title="Заметки">
     <ContentPage.Content>
         <AbsoluteLayout>
-            
-            <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="SizeProportional">
-                <ListView x:Name="noteList" ItemsSource="{Binding}" ItemSelected="noteList_ItemSelected">
+
+            <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="SizeProportional" >
+                <ListView x:Name="noteList" ItemsSource="{Binding}" ItemSelected="noteList_ItemSelected" HasUnevenRows="True" SeparatorVisibility="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
+                            <ViewCell Height="75">
                                 <ViewCell.View>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding Headler}" FontSize="Medium" Margin="6" HorizontalOptions="Start" VerticalOptions="Center"/>
-
-                                    </StackLayout>
+                                    <Frame OutlineColor="AliceBlue" HasShadow="True" Margin="6,3" Padding="2">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding Headler}" FontSize="Medium" Margin="6" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                        </StackLayout>
+                                    </Frame>
                                 </ViewCell.View>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
-            
+
             <Image HeightRequest="75" WidthRequest="75" Source="{local:ImageResource Note2018.Pic.FAbutton.png}" AbsoluteLayout.LayoutBounds=".9,.95,75,75" AbsoluteLayout.LayoutFlags="PositionProportional">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                 </Image.GestureRecognizers>
             </Image>
-            
+
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
