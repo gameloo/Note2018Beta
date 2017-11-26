@@ -20,5 +20,7 @@ namespace Note2018
 
         public string NoteText { get; set; }
         public int IsFavorite { get; set; } //bool
+
+        public DateTime DateTimeSave { get; set; } //
     }
 }

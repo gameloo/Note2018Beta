@@ -22,6 +22,7 @@ namespace Note2018
             var note = (Note)BindingContext;
             if (!String.IsNullOrEmpty(note.Headler))
             {
+                note.DateTimeSave = DateTime.Now; //
                 App.Database.SaveItem(note);
             }
             this.Navigation.PopAsync();

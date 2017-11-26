@@ -14,8 +14,9 @@
                             <ViewCell Height="75">
                                 <ViewCell.View>
                                     <Frame OutlineColor="AliceBlue" HasShadow="True" Margin="6,3" Padding="2">
-                                        <StackLayout Orientation="Horizontal">
-                                            <Label Text="{Binding Headler}" FontSize="Medium" Margin="6" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                        <StackLayout Orientation="Vertical">
+                                            <Label Text="{Binding Headler}" FontSize="Medium" Margin="6" HorizontalOptions="Start" VerticalOptions="Center" TextColor="Black"/>
+                                            <Label Text="{Binding DateTimeSave}" FontSize="Small" Margin="6" HorizontalOptions="EndAndExpand" VerticalOptions="Center" TextColor="Gray"/>
                                         </StackLayout>
                                     </Frame>
                                 </ViewCell.View>
