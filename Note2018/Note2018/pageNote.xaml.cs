@@ -25,8 +25,12 @@ namespace Note2018
                 note.DateTimeSave = DateTime.Now; //
                 note.InRecycleBin = false; //
                 App.Database.SaveItem(note);
+                this.Navigation.PopAsync();
             }
-            this.Navigation.PopAsync();
+            else
+            {
+                DisplayAlert("Ошибка", "Заметка должна иметь заголовок", "OK");
+            }
         }
 
         private void DelNote_Clicked(object sender, EventArgs e)
@@ -35,9 +39,12 @@ namespace Note2018
             App.Database.DeleteItem(note.Id);
             this.Navigation.PopAsync();*/
             var note = (Note)BindingContext;
-            note.InRecycleBin = true;
-            App.Database.SaveItem(note);
-            this.Navigation.PopAsync();
+            if (!String.IsNullOrEmpty(note.Headler))
+            {
+                note.InRecycleBin = true;
+                App.Database.SaveItem(note);
+                this.Navigation.PopAsync();
+            }
         }
 
         private void Cancel_Clicked(object sender, EventArgs e)
