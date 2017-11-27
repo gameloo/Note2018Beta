@@ -23,6 +23,7 @@ namespace Note2018
             if (!String.IsNullOrEmpty(note.Headler))
             {
                 note.DateTimeSave = DateTime.Now; //
+                note.InRecycleBin = false; //
                 App.Database.SaveItem(note);
             }
             this.Navigation.PopAsync();
@@ -30,10 +31,13 @@ namespace Note2018
 
         private void DelNote_Clicked(object sender, EventArgs e)
         {
-            var note = (Note)BindingContext;
+            /*var note = (Note)BindingContext;
             App.Database.DeleteItem(note.Id);
+            this.Navigation.PopAsync();*/
+            var note = (Note)BindingContext;
+            note.InRecycleBin = true;
+            App.Database.SaveItem(note);
             this.Navigation.PopAsync();
-
         }
 
         private void Cancel_Clicked(object sender, EventArgs e)

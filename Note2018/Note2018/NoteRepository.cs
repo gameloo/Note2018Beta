@@ -23,12 +23,18 @@ namespace Note2018
 
         public IEnumerable<Note> GetItems()
         {
-            return (from i in database.Table<Note>() select i).ToList();
+            return (from i in database.Table<Note>() where i.InRecycleBin == false select i).ToList();
+            //return (from i in database.Table<Note>() select i).ToList();
         }
 
         public IEnumerable<Note> GetFavoriteItems()
         {
-            return (from i in database.Table<Note>() where i.IsFavorite != 0 select i).ToList();
+            return (from i in database.Table<Note>() where ((i.IsFavorite != 0)&&(i.InRecycleBin == false)) select i).ToList();
+        }
+
+        public IEnumerable<Note> GetRecycleBinItems()
+        {
+            return (from i in database.Table<Note>() where i.InRecycleBin == true select i).ToList();
         }
 
         public Note GetItem(int id)

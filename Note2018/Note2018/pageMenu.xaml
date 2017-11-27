@@ -5,7 +5,7 @@
              Title="Меню">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="listView" SeparatorVisibility="Default">
+            <ListView x:Name="listView" SeparatorVisibility="Default"  ItemSelected="menuItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

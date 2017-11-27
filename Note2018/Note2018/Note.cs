@@ -22,5 +22,7 @@ namespace Note2018
         public int IsFavorite { get; set; } //bool
 
         public DateTime DateTimeSave { get; set; } //
+
+        public bool InRecycleBin { get; set; } //bool В корзине? true - Да
     }
 }
