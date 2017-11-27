@@ -51,12 +51,21 @@ namespace Note2018
 
         private void ReeAllNote_Clicked(object sender, SelectedItemChangedEventArgs e)
         {
-
+            foreach (Note note in rNoteList.ItemsSource)
+            {
+                note.InRecycleBin = false;
+                App.Database.SaveItem(note);
+            }
+            OnAppearing();
         }
 
         private void DelAllNote_Clicked(object sender, SelectedItemChangedEventArgs e)
         {
-
+            foreach (Note note in rNoteList.ItemsSource)
+            {
+                App.Database.DeleteItem(note.Id);
+            }
+            OnAppearing();
         }
 
         private void Cancel_Clicked(object sender, SelectedItemChangedEventArgs e)
