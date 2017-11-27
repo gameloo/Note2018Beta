@@ -22,25 +22,36 @@ namespace Note2018
 
             var PageItems = new List<Label>();
 
-            PageItems.Add(new Label { Text = "Войти" });
-            PageItems.Add(new Label { Text = "Синхронизация" });
-            PageItems.Add(new Label { Text = "Корзина"});
-            PageItems.Add(new Label { Text = "Настройки" });
-            PageItems.Add(new Label { Text = "Закрыть приложение" });
+            PageItems.Add(new Label { Text = "Войти", ClassId = "Login" });
+            PageItems.Add(new Label { Text = "Синхронизация", ClassId = "Synchronize" });
+            PageItems.Add(new Label { Text = "Корзина", ClassId = "RecycleBin" });
+            PageItems.Add(new Label { Text = "Настройки", ClassId = "Settings" });
+            PageItems.Add(new Label { Text = "Закрыть приложение", ClassId = "CloseApp" });
             listView.ItemsSource = PageItems;
         }
 
         private async void menuItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Label selectLabel = (Label)e.SelectedItem;
-            switch (selectLabel.Text)
+            switch (selectLabel.ClassId)
             {
-                case "Корзина":
+                case "RecycleBin":
                     {
                         pageRecycleBin page = new pageRecycleBin();
                         await Navigation.PushAsync(page);
                         //listView.ItemSelected += null;
                         break;
+                    }
+                case "Settings":
+                    {
+                        pageSettings page = new pageSettings();
+                        await Navigation.PushAsync(page);
+                        break;
+                    }
+                case "CloseApp":
+                    {
+
+                        break;// Завершение работы приложения добавлю потом
                     }
             }
             //listView.ItemSelected += null;

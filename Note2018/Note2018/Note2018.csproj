@@ -59,6 +59,9 @@
     <Compile Include="pageRecycleBin.xaml.cs">
       <DependentUpon>pageRecycleBin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="pageSettings.xaml.cs">
+      <DependentUpon>pageSettings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +129,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="pageRecycleBin.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="pageSettings.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
