@@ -25,17 +25,26 @@ namespace Note2018
 
         private async void RecycleBinList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            bool result = await DisplayAlert("Выберите действие", "Удалить: заметка будет удалена без возможности восстановления\n\nВосстановить: заметка будет восстановлена и убрана из корзины", "Восстановить", "Удалить");
-            if (result == true)
+            var action = await DisplayActionSheet("Выберите действие", "Отмена", null, "Удалить", "Восстановить");
+            switch (action)
             {
-                Note note = (Note)e.SelectedItem;
-                note.InRecycleBin = false;
-                App.Database.SaveItem(note);
-            }
-            else
-            {
-                Note note = (Note)e.SelectedItem;
-                App.Database.DeleteItem(note.Id);
+                case "Удалить":
+                    {
+                        Note note = (Note)e.SelectedItem;
+                        App.Database.DeleteItem(note.Id);
+                        break;
+                    }
+                case "Восстановить":
+                    {
+                        Note note = (Note)e.SelectedItem;
+                        note.InRecycleBin = false;
+                        App.Database.SaveItem(note);
+                        break;
+                    }
+                case "Отмена":
+                    {
+                        break;
+                    }
             }
             OnAppearing();
         }
