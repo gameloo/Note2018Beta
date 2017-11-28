@@ -19,7 +19,7 @@ namespace Note2018
 
         protected override void OnAppearing()
         {
-            fNoteList.ItemsSource = App.Database.GetFavoriteItems();
+            fNoteList.ItemsSource = App.Database.GetItems(NoteRepository.RequestItems.FavoriteItems);
             base.OnAppearing();
         }
 

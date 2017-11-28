@@ -11,6 +11,15 @@ namespace Note2018
 {
     public class NoteRepository
     {
+        public enum RequestItems
+        {
+            AllItems,
+            AllVisible,
+            FavoriteItems,
+            RecycleBinItems
+        }
+
+
         static object locker = new object();
 
         SQLiteConnection database;
@@ -21,6 +30,20 @@ namespace Note2018
             database.CreateTable<Note>();
         }
 
+        public IEnumerable<Note> GetItems(RequestItems request)
+        {
+            switch (request)
+            {
+                case RequestItems.AllItems: return (from i in database.Table<Note>() select i).ToList();
+                case RequestItems.AllVisible: return (from i in database.Table<Note>() where i.InRecycleBin == false select i).ToList();
+                case RequestItems.FavoriteItems: return (from i in database.Table<Note>() where ((i.IsFavorite != 0) && (i.InRecycleBin == false)) select i).ToList();
+                case RequestItems.RecycleBinItems: return (from i in database.Table<Note>() where i.InRecycleBin == true select i).ToList();
+                default: return null;
+            }
+        }
+
+
+        /*
         public IEnumerable<Note> GetItems()
         {
             return (from i in database.Table<Note>() where i.InRecycleBin == false select i).ToList();
@@ -36,7 +59,7 @@ namespace Note2018
         {
             return (from i in database.Table<Note>() where i.InRecycleBin == true select i).ToList();
         }
-
+        */
         public Note GetItem(int id)
         {
             return database.Get<Note>(id);

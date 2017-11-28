@@ -19,7 +19,7 @@ namespace Note2018
 
         protected override void OnAppearing()
         {
-            rNoteList.ItemsSource = App.Database.GetRecycleBinItems();
+            rNoteList.ItemsSource = App.Database.GetItems(NoteRepository.RequestItems.RecycleBinItems);
             base.OnAppearing();
         }
 

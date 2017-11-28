@@ -21,7 +21,7 @@ namespace Note2018
 
         protected override void OnAppearing()
         {
-            noteList.ItemsSource = App.Database.GetItems();
+            noteList.ItemsSource = App.Database.GetItems(NoteRepository.RequestItems.AllVisible);
             base.OnAppearing();
         }
 
