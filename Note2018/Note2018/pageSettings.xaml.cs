@@ -30,7 +30,7 @@ namespace Note2018
             {
                 case "ClearDB":
                     {
-                        foreach(Note note in App.database.GetItems())
+                        foreach(Note note in App.database.GetItems()) // Проверить работоспособность
                         App.Database.DeleteItem(note.Id);
                         break;
                     }

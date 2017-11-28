@@ -20,7 +20,7 @@ namespace Note2018
         private void SaveNote_Clicked(object sender, EventArgs e)
         {
             var note = (Note)BindingContext;
-            if (!String.IsNullOrEmpty(note.Headler))
+            if (!String.IsNullOrEmpty(note.Header))
             {
                 note.DateTimeSave = DateTime.Now; //
                 note.InRecycleBin = false; //
@@ -39,7 +39,7 @@ namespace Note2018
             App.Database.DeleteItem(note.Id);
             this.Navigation.PopAsync();*/
             var note = (Note)BindingContext;
-            if (!String.IsNullOrEmpty(note.Headler))
+            if (!String.IsNullOrEmpty(note.Header))
             {
                 note.InRecycleBin = true;
                 App.Database.SaveItem(note);

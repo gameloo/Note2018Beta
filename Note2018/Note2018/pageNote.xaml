@@ -9,7 +9,7 @@
                 <Label Text="В избранном" Margin="6" FontSize="Medium" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Start"/>
                 <Switch x:Name="SwitchFavorite" IsToggled="{Binding IsFavorite}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="6"/>
             </StackLayout>
-            <Entry Placeholder="Заголовок" Text="{Binding Headler}"/>
+            <Entry Placeholder="Заголовок" Text="{Binding Header}"/>
            
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Текст" Margin="6" FontSize="Small"/>

@@ -16,7 +16,7 @@ namespace Note2018
         public string FolderName { get; set; }
 
         [NotNull]
-        public string Headler { get; set; }
+        public string Header { get; set; }
 
         public string NoteText { get; set; }
         public int IsFavorite { get; set; } //bool

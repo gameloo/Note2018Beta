@@ -12,7 +12,7 @@
                             <ViewCell>
                                 <ViewCell.View>
                                     <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding Headler}" FontSize="Medium" Margin="6" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                        <Label Text="{Binding Header}" FontSize="Medium" Margin="6" HorizontalOptions="Start" VerticalOptions="Center"/>
                                     </StackLayout>
                                 </ViewCell.View>
                             </ViewCell>
