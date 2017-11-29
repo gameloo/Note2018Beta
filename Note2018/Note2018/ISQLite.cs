@@ -10,6 +10,5 @@ namespace Note2018
     public interface ISQLite
     {
         string GetDatabasePath(string filename);
-        //SQLite.SQLiteConnection DbConnection();
     }
 }

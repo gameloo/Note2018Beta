@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <ListView x:Name="rNoteList" ItemsSource="{Binding}" ItemSelected="RecycleBinList_ItemSelected">
+                <ListView x:Name="rNoteList" ItemsSource="{Binding}" ItemTapped="rNoteList_ItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

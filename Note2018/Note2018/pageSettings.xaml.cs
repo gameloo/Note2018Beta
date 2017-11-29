@@ -24,9 +24,9 @@ namespace Note2018
             settingsListView.ItemsSource = PageItems;
         }
 
-        private async void settingsItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void settingsListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Label selectLabel = (Label)e.SelectedItem;
+            Label selectLabel = (Label)e.Item;
             object locker = new object();
 
             switch (selectLabel.ClassId)
@@ -35,9 +35,10 @@ namespace Note2018
                     {
                         Task task = new Task(() =>
                         {
+                            Device.BeginInvokeOnMainThread(() => { settingsListView.BeginRefresh(); });
                             foreach (Note note in App.database.GetItems(NoteRepository.RequestItems.AllItems)) // Проверить работоспособность
                                 App.Database.DeleteItem(note.Id);
-                            Device.BeginInvokeOnMainThread(async() => {await DisplayAlert("Уведомление", "Все заметки были удалены", "OK"); });
+                            Device.BeginInvokeOnMainThread(async () => { settingsListView.EndRefresh(); await DisplayAlert("Уведомление", "Все заметки были удалены", "OK"); });
                         });
 
                         bool result = await DisplayAlert("Подтвердить действие", "Вы хотите удалить все заметки?", "Да", "Нет");
@@ -48,13 +49,13 @@ namespace Note2018
                     {
                         Task task = new Task(() =>
                         {
-                            for (int i = 0; i < 1000; i++)
+                            for (int i = 0; i < 100; i++)
                             {
                                 Note note = new Note();
                                 note.Header = "TestNote" + i.ToString();
                                 App.Database.SaveItem(note);
                             }
-                            Device.BeginInvokeOnMainThread(async() => {await DisplayAlert("Уведомление", "Создано 1000 записей", "OK"); });
+                            Device.BeginInvokeOnMainThread(async () => { await DisplayAlert("Уведомление", "Создано 100 записей", "OK"); });
                         });
 
                         lock (locker) task.Start();

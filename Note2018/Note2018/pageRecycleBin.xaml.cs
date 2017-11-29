@@ -23,32 +23,6 @@ namespace Note2018
             base.OnAppearing();
         }
 
-        private async void RecycleBinList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            var action = await DisplayActionSheet("Выберите действие", "Отмена", null, "Удалить", "Восстановить");
-            switch (action)
-            {
-                case "Удалить":
-                    {
-                        Note note = (Note)e.SelectedItem;
-                        App.Database.DeleteItem(note.Id);
-                        break;
-                    }
-                case "Восстановить":
-                    {
-                        Note note = (Note)e.SelectedItem;
-                        note.InRecycleBin = false;
-                        App.Database.SaveItem(note);
-                        break;
-                    }
-                case "Отмена":
-                    {
-                        break;
-                    }
-            }
-            OnAppearing();
-        }
-
         private void ReeAllNote_Clicked(object sender, SelectedItemChangedEventArgs e)
         {
             Task.Run(() =>
@@ -79,5 +53,30 @@ namespace Note2018
             this.Navigation.PopAsync();
         }
 
+        private async void rNoteList_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var action = await DisplayActionSheet("Выберите действие", "Отмена", null, "Удалить", "Восстановить");
+            switch (action)
+            {
+                case "Удалить":
+                    {
+                        Note note = (Note)e.Item;
+                        App.Database.DeleteItem(note.Id);
+                        break;
+                    }
+                case "Восстановить":
+                    {
+                        Note note = (Note)e.Item;
+                        note.InRecycleBin = false;
+                        App.Database.SaveItem(note);
+                        break;
+                    }
+                case "Отмена":
+                    {
+                        break;
+                    }
+            }
+            OnAppearing();
+        }
     }
 }

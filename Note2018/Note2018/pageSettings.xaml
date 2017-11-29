@@ -4,7 +4,7 @@
              x:Class="Note2018.pageSettings">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="settingsListView" SeparatorVisibility="Default"  ItemSelected="settingsItemSelected">
+            <ListView x:Name="settingsListView" SeparatorVisibility="Default" ItemTapped="settingsListView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

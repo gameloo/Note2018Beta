@@ -50,9 +50,6 @@ namespace Note2018
             pageNote.BindingContext = note;
             await Navigation.PushAsync(pageNote);
         }
-
-        
-
     }
 
     [ContentProperty("Source")]
@@ -71,6 +68,5 @@ namespace Note2018
             return imageSource;
         }
     }
-
 
 }

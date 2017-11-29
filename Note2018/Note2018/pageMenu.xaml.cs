@@ -30,16 +30,15 @@ namespace Note2018
             listView.ItemsSource = PageItems;
         }
 
-        private async void menuItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Label selectLabel = (Label)e.SelectedItem;
+            Label selectLabel = (Label)e.Item;
             switch (selectLabel.ClassId)
             {
                 case "RecycleBin":
                     {
                         pageRecycleBin page = new pageRecycleBin();
                         await Navigation.PushAsync(page);
-                        //listView.ItemSelected += null;
                         break;
                     }
                 case "Settings":
@@ -51,10 +50,9 @@ namespace Note2018
                 case "CloseApp":
                     {
 
-                        break;// Завершение работы приложения добавлю потом
+                        break;// Завершение работы приложения (добавлю потом)
                     }
             }
-            //listView.ItemSelected += null;
-            }
+        }
     }
 }
