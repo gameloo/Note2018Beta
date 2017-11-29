@@ -49,8 +49,8 @@ namespace Note2018
                     }
                 case "CloseApp":
                     {
-
-                        break;// Завершение работы приложения (добавлю потом)
+                        DependencyService.Get<ICloseApp>().CloseApp();
+                        break;
                     }
             }
         }
