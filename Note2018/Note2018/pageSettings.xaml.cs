@@ -38,10 +38,10 @@ namespace Note2018
                             Device.BeginInvokeOnMainThread(() => { settingsListView.BeginRefresh(); });
                             foreach (Note note in App.database.GetItems(NoteRepository.RequestItems.AllItems)) // Проверить работоспособность
                                 App.Database.DeleteItem(note.Id);
-                            Device.BeginInvokeOnMainThread(async () => { settingsListView.EndRefresh(); await DisplayAlert("Уведомление", "Все заметки были удалены", "OK"); });
+                            Device.BeginInvokeOnMainThread(async () => { settingsListView.EndRefresh(); await DisplayAlert(Resource.TextNotice, Resource.settingsDAmesAllDel, Resource.TextOK); });
                         });
 
-                        bool result = await DisplayAlert("Подтвердить действие", "Вы хотите удалить все заметки?", "Да", "Нет");
+                        bool result = await DisplayAlert(Resource.settingsDAtitle, Resource.settingsDAmessage, Resource.TextYes, Resource.TextNo);
                         lock (locker) if (result == true) task.Start();
                         break;
                     }

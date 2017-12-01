@@ -125,6 +125,15 @@ namespace Note2018 {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Note must have a title.
+        /// </summary>
+        internal static string noteDAmessage {
+            get {
+                return ResourceManager.GetString("noteDAmessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на In favorites.
         /// </summary>
         internal static string noteInFavoriteText {
@@ -197,6 +206,33 @@ namespace Note2018 {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Delete.
+        /// </summary>
+        internal static string recycleBinDASbutDel {
+            get {
+                return ResourceManager.GetString("recycleBinDASbutDel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Restore.
+        /// </summary>
+        internal static string recycleBinDASbutRee {
+            get {
+                return ResourceManager.GetString("recycleBinDASbutRee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Select an action.
+        /// </summary>
+        internal static string recycleBinDAStitle {
+            get {
+                return ResourceManager.GetString("recycleBinDAStitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Cancel.
         /// </summary>
         internal static string recycleBinToolBarCancel {
@@ -242,6 +278,33 @@ namespace Note2018 {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на All notes has been deleted.
+        /// </summary>
+        internal static string settingsDAmesAllDel {
+            get {
+                return ResourceManager.GetString("settingsDAmesAllDel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Do you want to delete all notes?.
+        /// </summary>
+        internal static string settingsDAmessage {
+            get {
+                return ResourceManager.GetString("settingsDAmessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Confirm action.
+        /// </summary>
+        internal static string settingsDAtitle {
+            get {
+                return ResourceManager.GetString("settingsDAtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Delete all notes.
         /// </summary>
         internal static string settingsDeleteAllNotesText {
@@ -256,6 +319,60 @@ namespace Note2018 {
         internal static string settingsTitle {
             get {
                 return ResourceManager.GetString("settingsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Cancel.
+        /// </summary>
+        internal static string TextCancel {
+            get {
+                return ResourceManager.GetString("TextCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Error.
+        /// </summary>
+        internal static string TextError {
+            get {
+                return ResourceManager.GetString("TextError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на No.
+        /// </summary>
+        internal static string TextNo {
+            get {
+                return ResourceManager.GetString("TextNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Notice.
+        /// </summary>
+        internal static string TextNotice {
+            get {
+                return ResourceManager.GetString("TextNotice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на OK.
+        /// </summary>
+        internal static string TextOK {
+            get {
+                return ResourceManager.GetString("TextOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Yes.
+        /// </summary>
+        internal static string TextYes {
+            get {
+                return ResourceManager.GetString("TextYes", resourceCulture);
             }
         }
     }

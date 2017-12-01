@@ -55,23 +55,28 @@ namespace Note2018
 
         private async void rNoteList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            var action = await DisplayActionSheet("Выберите действие", "Отмена", null, "Удалить", "Восстановить");
+            var action = await DisplayActionSheet(Resource.recycleBinDAStitle, Resource.TextCancel, null, Resource.recycleBinDASbutDel, Resource.recycleBinDASbutRee);
+
+            if (action == Resource.recycleBinDASbutDel) action = "Delete";    // Кривая реализация, переделать
+            else if (action == Resource.recycleBinDASbutRee) action = "Restore";
+            else action = "Cancel";
+
             switch (action)
             {
-                case "Удалить":
+                case "Delete":
                     {
                         Note note = (Note)e.Item;
                         App.Database.DeleteItem(note.Id);
                         break;
                     }
-                case "Восстановить":
+                case "Restore":
                     {
                         Note note = (Note)e.Item;
                         note.InRecycleBin = false;
                         App.Database.SaveItem(note);
                         break;
                     }
-                case "Отмена":
+                case "Cancel":
                     {
                         break;
                     }

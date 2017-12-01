@@ -29,15 +29,12 @@ namespace Note2018
             }
             else
             {
-                DisplayAlert("Ошибка", "Заметка должна иметь заголовок", "OK");
+                DisplayAlert(Resource.TextError, Resource.noteDAmessage, Resource.TextOK);
             }
         }
 
         private void DelNote_Clicked(object sender, EventArgs e)
         {
-            /*var note = (Note)BindingContext;
-            App.Database.DeleteItem(note.Id);
-            this.Navigation.PopAsync();*/
             var note = (Note)BindingContext;
             if (!String.IsNullOrEmpty(note.Header))
             {

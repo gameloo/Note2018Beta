@@ -138,6 +138,9 @@
   <data name="menuTitle" xml:space="preserve">
     <value>Меню</value>
   </data>
+  <data name="noteDAmessage" xml:space="preserve">
+    <value>Заметка должна иметь заголовок</value>
+  </data>
   <data name="noteInFavoriteText" xml:space="preserve">
     <value>В избранном</value>
   </data>
@@ -162,6 +165,15 @@
   <data name="noteToolbarSave" xml:space="preserve">
     <value>Сохранить</value>
   </data>
+  <data name="recycleBinDASbutDel" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="recycleBinDASbutRee" xml:space="preserve">
+    <value>Восстановить</value>
+  </data>
+  <data name="recycleBinDAStitle" xml:space="preserve">
+    <value>Выберите действие</value>
+  </data>
   <data name="recycleBinToolBarCancel" xml:space="preserve">
     <value>Назад</value>
   </data>
@@ -177,10 +189,37 @@
   <data name="settingsAdd100" xml:space="preserve">
     <value>(Для тестрования) Добавить 100 заметок</value>
   </data>
+  <data name="settingsDAmesAllDel" xml:space="preserve">
+    <value>Все заметки были удалены</value>
+  </data>
+  <data name="settingsDAmessage" xml:space="preserve">
+    <value>Вы хотите удалить все заметки?</value>
+  </data>
+  <data name="settingsDAtitle" xml:space="preserve">
+    <value>Подтвердить действие</value>
+  </data>
   <data name="settingsDeleteAllNotesText" xml:space="preserve">
     <value>Удалить все заметки</value>
   </data>
   <data name="settingsTitle" xml:space="preserve">
     <value>Настройки</value>
+  </data>
+  <data name="TextCancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="TextError" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="TextNo" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="TextNotice" xml:space="preserve">
+    <value>Уведомление</value>
+  </data>
+  <data name="TextOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="TextYes" xml:space="preserve">
+    <value>Да</value>
   </data>
 </root>

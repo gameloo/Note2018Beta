@@ -138,6 +138,9 @@
   <data name="menuTitle" xml:space="preserve">
     <value>Menu</value>
   </data>
+  <data name="noteDAmessage" xml:space="preserve">
+    <value>Note must have a title</value>
+  </data>
   <data name="noteInFavoriteText" xml:space="preserve">
     <value>In favorites</value>
   </data>
@@ -162,6 +165,15 @@
   <data name="noteToolbarSave" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="recycleBinDASbutDel" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="recycleBinDASbutRee" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="recycleBinDAStitle" xml:space="preserve">
+    <value>Select an action</value>
+  </data>
   <data name="recycleBinToolBarCancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -177,10 +189,37 @@
   <data name="settingsAdd100" xml:space="preserve">
     <value>(Test) Add 100 notes</value>
   </data>
+  <data name="settingsDAmesAllDel" xml:space="preserve">
+    <value>All notes has been deleted</value>
+  </data>
+  <data name="settingsDAmessage" xml:space="preserve">
+    <value>Do you want to delete all notes?</value>
+  </data>
+  <data name="settingsDAtitle" xml:space="preserve">
+    <value>Confirm action</value>
+  </data>
   <data name="settingsDeleteAllNotesText" xml:space="preserve">
     <value>Delete all notes</value>
   </data>
   <data name="settingsTitle" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="TextCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="TextError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="TextNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="TextNotice" xml:space="preserve">
+    <value>Notice</value>
+  </data>
+  <data name="TextOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="TextYes" xml:space="preserve">
+    <value>Yes</value>
   </data>
 </root>
