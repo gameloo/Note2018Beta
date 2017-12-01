@@ -118,69 +118,69 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="favoriteTitle" xml:space="preserve">
-    <value>Favorite</value>
+    <value>Избранное</value>
   </data>
   <data name="menuCloseAppText" xml:space="preserve">
-    <value>Close App</value>
+    <value>Закрыть приложение</value>
   </data>
   <data name="menuLoginText" xml:space="preserve">
-    <value>Log in</value>
+    <value>Авторизоваться</value>
   </data>
   <data name="menuRecycleBinText" xml:space="preserve">
-    <value>Recycle Bin</value>
+    <value>Корзина</value>
   </data>
   <data name="menuSettingsText" xml:space="preserve">
-    <value>Settings</value>
+    <value>Настройки</value>
   </data>
   <data name="menuSynchronizeText" xml:space="preserve">
-    <value>Synch</value>
+    <value>Синхронизация</value>
   </data>
   <data name="menuTitle" xml:space="preserve">
-    <value>Menu</value>
+    <value>Меню</value>
   </data>
   <data name="noteInFavoriteText" xml:space="preserve">
-    <value>In favorites</value>
+    <value>В избранном</value>
   </data>
   <data name="noteListTitle" xml:space="preserve">
-    <value>Notes</value>
+    <value>Заметки</value>
   </data>
   <data name="notePlaceholderHeader" xml:space="preserve">
-    <value>Header</value>
+    <value>Заголовок</value>
   </data>
   <data name="noteText" xml:space="preserve">
-    <value>Text</value>
+    <value>Текст</value>
   </data>
   <data name="noteTitle" xml:space="preserve">
-    <value>Note</value>
+    <value>Заметка</value>
   </data>
   <data name="noteToolbarCancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Назад</value>
   </data>
   <data name="noteToolbarDel" xml:space="preserve">
-    <value>Delete</value>
+    <value>Удалить</value>
   </data>
   <data name="noteToolbarSave" xml:space="preserve">
-    <value>Save</value>
+    <value>Сохранить</value>
   </data>
   <data name="recycleBinToolBarCancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Назад</value>
   </data>
   <data name="recycleBinToolBarDellAll" xml:space="preserve">
-    <value>Clear Bin</value>
+    <value>Очистить корзину</value>
   </data>
   <data name="recycleBinToolBarReeAll" xml:space="preserve">
-    <value>Restore all</value>
+    <value>Восстановить все</value>
   </data>
   <data name="recycleBinToolBarTitle" xml:space="preserve">
-    <value>Recycle Bin</value>
+    <value>Корзина</value>
   </data>
   <data name="settingsAdd100" xml:space="preserve">
-    <value>(Test) Add 100 notes</value>
+    <value>(Для тестрования) Добавить 100 заметок</value>
   </data>
   <data name="settingsDeleteAllNotesText" xml:space="preserve">
-    <value>Delete all notes</value>
+    <value>Удалить все заметки</value>
   </data>
   <data name="settingsTitle" xml:space="preserve">
-    <value>Settings</value>
+    <value>Настройки</value>
   </data>
 </root>

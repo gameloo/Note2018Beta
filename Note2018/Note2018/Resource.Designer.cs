@@ -62,7 +62,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Favorite.
         /// </summary>
         internal static string favoriteTitle {
             get {
@@ -71,7 +71,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Close App.
         /// </summary>
         internal static string menuCloseAppText {
             get {
@@ -80,7 +80,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Log in.
         /// </summary>
         internal static string menuLoginText {
             get {
@@ -89,7 +89,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Recycle Bin.
         /// </summary>
         internal static string menuRecycleBinText {
             get {
@@ -98,7 +98,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Settings.
         /// </summary>
         internal static string menuSettingsText {
             get {
@@ -107,7 +107,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Synch.
         /// </summary>
         internal static string menuSynchronizeText {
             get {
@@ -116,7 +116,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Menu.
         /// </summary>
         internal static string menuTitle {
             get {
@@ -125,7 +125,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на In favorites.
         /// </summary>
         internal static string noteInFavoriteText {
             get {
@@ -134,7 +134,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Notes.
         /// </summary>
         internal static string noteListTitle {
             get {
@@ -143,7 +143,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Header.
         /// </summary>
         internal static string notePlaceholderHeader {
             get {
@@ -152,7 +152,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Text.
         /// </summary>
         internal static string noteText {
             get {
@@ -161,7 +161,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Note.
         /// </summary>
         internal static string noteTitle {
             get {
@@ -170,7 +170,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Cancel.
         /// </summary>
         internal static string noteToolbarCancel {
             get {
@@ -179,7 +179,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Delete.
         /// </summary>
         internal static string noteToolbarDel {
             get {
@@ -188,7 +188,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Save.
         /// </summary>
         internal static string noteToolbarSave {
             get {
@@ -197,7 +197,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Cancel.
         /// </summary>
         internal static string recycleBinToolBarCancel {
             get {
@@ -206,7 +206,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Clear Bin.
         /// </summary>
         internal static string recycleBinToolBarDellAll {
             get {
@@ -215,7 +215,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Restore all.
         /// </summary>
         internal static string recycleBinToolBarReeAll {
             get {
@@ -224,7 +224,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Recycle Bin.
         /// </summary>
         internal static string recycleBinToolBarTitle {
             get {
@@ -233,7 +233,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на (Test) Add 100 notes.
         /// </summary>
         internal static string settingsAdd100 {
             get {
@@ -242,7 +242,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Delete all notes.
         /// </summary>
         internal static string settingsDeleteAllNotesText {
             get {
@@ -251,7 +251,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Settings.
         /// </summary>
         internal static string settingsTitle {
             get {

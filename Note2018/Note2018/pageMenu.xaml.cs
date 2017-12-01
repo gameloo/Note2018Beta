@@ -22,11 +22,11 @@ namespace Note2018
 
             var PageItems = new List<Label>();
 
-            PageItems.Add(new Label { Text = "Войти", ClassId = "Login" });
-            PageItems.Add(new Label { Text = "Синхронизация", ClassId = "Synchronize" });
-            PageItems.Add(new Label { Text = "Корзина", ClassId = "RecycleBin" });
-            PageItems.Add(new Label { Text = "Настройки", ClassId = "Settings" });
-            PageItems.Add(new Label { Text = "Закрыть приложение", ClassId = "CloseApp" });
+            PageItems.Add(new Label { Text = Resource.menuLoginText, ClassId = "Login" });
+            PageItems.Add(new Label { Text = Resource.menuSynchronizeText, ClassId = "Synchronize" });
+            PageItems.Add(new Label { Text = Resource.menuRecycleBinText, ClassId = "RecycleBin" });
+            PageItems.Add(new Label { Text = Resource.menuSettingsText, ClassId = "Settings" });
+            PageItems.Add(new Label { Text = Resource.menuCloseAppText, ClassId = "CloseApp" });
             listView.ItemsSource = PageItems;
         }
 

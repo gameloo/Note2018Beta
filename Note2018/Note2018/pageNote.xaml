@@ -2,17 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Note2018.pageNote"
-             Title="Заметка">
+             xmlns:local="clr-namespace:Note2018; assembly=Note2018"
+             Title="{local:Translate noteTitle}">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="В избранном" Margin="6" FontSize="Medium" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Label Text="{local:Translate noteInFavoriteText}" Margin="6" FontSize="Medium" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Start"/>
                 <Switch x:Name="SwitchFavorite" IsToggled="{Binding IsFavorite}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="6"/>
             </StackLayout>
-            <Entry Placeholder="Заголовок" Text="{Binding Header}"/>
+            <Entry Placeholder="{local:Translate notePlaceholderHeader}" Text="{Binding Header}"/>
            
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Текст" Margin="6" FontSize="Small"/>
+                <Label Text="{local:Translate noteText}" Margin="6" FontSize="Small"/>
                     <Switch x:Name="SwitchEnTextBox" IsToggled="False" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="6" Toggled="SwitchEnTextBox_Toggled"/>
                 </StackLayout>
                 <ScrollView>
@@ -22,8 +23,8 @@
         </StackLayout>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="Сохранить" Activated="SaveNote_Clicked" Priority="0" Order="Secondary"/>
-        <ToolbarItem Name="Удалить" Activated="DelNote_Clicked" Priority="1" Order="Secondary"/>
-        <ToolbarItem Name="Назад" Activated="Cancel_Clicked" Priority="2" Order="Secondary"/>
+        <ToolbarItem Name="{local:Translate noteToolbarSave}" Activated="SaveNote_Clicked" Priority="0" Order="Secondary"/>
+        <ToolbarItem Name="{local:Translate noteToolbarDel}" Activated="DelNote_Clicked" Priority="1" Order="Secondary"/>
+        <ToolbarItem Name="{local:Translate noteToolbarCancel}" Activated="Cancel_Clicked" Priority="2" Order="Secondary"/>
     </ContentPage.ToolbarItems>
 </ContentPage>

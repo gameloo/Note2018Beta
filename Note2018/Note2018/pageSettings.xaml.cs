@@ -18,8 +18,8 @@ namespace Note2018
 
             var PageItems = new List<Label>();
 
-            PageItems.Add(new Label { Text = "Удалить все заметки", ClassId = "ClearDB" });
-            PageItems.Add(new Label { Text = "Добавить 100 заметок", ClassId = "Add100Note" });
+            PageItems.Add(new Label { Text = Resource.settingsDeleteAllNotesText, ClassId = "ClearDB" });
+            PageItems.Add(new Label { Text = Resource.settingsAdd100, ClassId = "Add100Note" });
 
             settingsListView.ItemsSource = PageItems;
         }
