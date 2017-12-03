@@ -13,27 +13,27 @@ namespace Note2018
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class pageMenu : ContentPage
     {
-        public ListView ListView { get { return listView; } }
+        public List<ItemMenu> Menu { get; set; }
 
 
         public pageMenu()
         {
             InitializeComponent();
 
-            var PageItems = new List<Label>();
+            Menu = new List<ItemMenu>
+            {
+                new ItemMenu { Title = Resource.menuRecycleBinText, PathImage = ImageSource.FromResource("Note2018.Icons.RecycleBin.png"), Id = "RecycleBin" },
+                new ItemMenu { Title = Resource.menuSettingsText, PathImage = ImageSource.FromResource("Note2018.Icons.Settings.png"), Id = "Settings" },
+                new ItemMenu { Title = Resource.menuCloseAppText, PathImage = ImageSource.FromResource("Note2018.Icons.Exit.png"), Id = "CloseApp" }
+            };
 
-            PageItems.Add(new Label { Text = Resource.menuLoginText, ClassId = "Login" });
-            PageItems.Add(new Label { Text = Resource.menuSynchronizeText, ClassId = "Synchronize" });
-            PageItems.Add(new Label { Text = Resource.menuRecycleBinText, ClassId = "RecycleBin" });
-            PageItems.Add(new Label { Text = Resource.menuSettingsText, ClassId = "Settings" });
-            PageItems.Add(new Label { Text = Resource.menuCloseAppText, ClassId = "CloseApp" });
-            listView.ItemsSource = PageItems;
+            this.BindingContext = this;
         }
 
         private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Label selectLabel = (Label)e.Item;
-            switch (selectLabel.ClassId)
+            ItemMenu selectLabel = (ItemMenu)e.Item;
+            switch (selectLabel.Id)
             {
                 case "RecycleBin":
                     {
@@ -54,5 +54,12 @@ namespace Note2018
                     }
             }
         }
+    }
+
+    public class ItemMenu
+    {
+        public string Title { get; set; }
+        public ImageSource PathImage { get; set; }
+        public string Id { get; set; }
     }
 }

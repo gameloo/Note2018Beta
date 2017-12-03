@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Note2018; assembly=Note2018"
              x:Class="Note2018.App">
 	<Application.Resources>
-
+        
 		<!-- Application resource dictionary -->
 
 	</Application.Resources>

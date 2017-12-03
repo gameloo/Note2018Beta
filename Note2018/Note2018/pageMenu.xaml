@@ -6,7 +6,20 @@
              Title="{local:Translate menuTitle}">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="listView" SeparatorVisibility="Default" ItemTapped="listView_ItemTapped">
+            <Frame Padding="2" Margin="0,0,0,3">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="{local:ImageResource Note2018.Pic.NoAvatar.png}" WidthRequest="100" HeightRequest="100" Margin="6" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Гость" FontSize="Medium" HorizontalOptions="Start" Margin="6" VerticalOptions="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Button Text="Войти" HorizontalOptions="Center" BorderColor="WhiteSmoke" BackgroundColor="Transparent" VerticalOptions="Center"/>
+                            <Button Text="Выйти" HorizontalOptions="Center" IsEnabled="False" BorderColor="WhiteSmoke" BackgroundColor="Transparent" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <ListView x:Name="listView" ItemsSource="{Binding Menu}" SeparatorVisibility="Default" ItemTapped="listView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -15,7 +28,8 @@
                                     <ColumnDefinition Width="30"/>
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.Column="1" Text="{Binding Text}" FontSize="Medium" TextColor="Black" VerticalOptions="FillAndExpand"/>
+                                <Image Source="{Binding PathImage}" WidthRequest="45" HeightRequest="45"/>
+                                <Label Grid.Column="1" Text="{Binding Title}" FontSize="Medium" TextColor="Black"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
