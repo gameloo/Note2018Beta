@@ -152,7 +152,7 @@ namespace Note2018 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Header.
+        ///   Ищет локализованную строку, похожую на Titile.
         /// </summary>
         internal static string notePlaceholderHeader {
             get {
