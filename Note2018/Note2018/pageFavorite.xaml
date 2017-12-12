@@ -6,22 +6,19 @@
              Title="{local:Translate favoriteTitle}">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout>
-                <ListView x:Name="fNoteList" ItemsSource="{Binding}" ItemSelected="noteList_ItemSelected">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ViewCell.View>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding Header}" FontSize="Medium" Margin="6" HorizontalOptions="Start" VerticalOptions="Center"/>
-
-                                    </StackLayout>
-                                </ViewCell.View>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>
+            <ListView x:Name="fNoteList" ItemsSource="{Binding}" ItemSelected="noteList_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Header}" FontSize="Medium" Margin="6" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
